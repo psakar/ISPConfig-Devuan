@@ -11,7 +11,7 @@ InstallWebServer() {
 	echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2" | debconf-set-selections
 	# - DISABLED DUE TO A BUG IN DBCONFIG - echo "phpmyadmin phpmyadmin/dbconfig-install boolean false" | debconf-set-selections
 	echo "dbconfig-common dbconfig-common/dbconfig-install boolean false" | debconf-set-selections
-	apt_install apache2 apache2-doc apache2-utils libapache2-mod-php libapache2-mod-fcgid apache2-suexec-pristine libruby libapache2-mod-python php-memcache php-imagick php-gettext libapache2-mod-passenger
+	apt_install apache2 apache2-doc apache2-utils libapache2-mod-php libapache2-mod-fcgid apache2-suexec-pristine libruby libapache2-mod-python php-memcache php-imagick php-php-gettext libapache2-mod-passenger
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP and modules... "
 	# Need to check if soemthing is asked before suppress messages
@@ -80,7 +80,7 @@ InstallWebServer() {
 	apt_install nginx
 	service nginx start
 	# apt_install php7.3 php7.3-common php-bcmath php7.3-gd php7.3-mysql php7.3-imap php7.3-cli php7.3-cgi php-pear mcrypt php7.3-curl php7.3-intl php7.3-pspell php7.3-recode php7.3-sqlite3 php7.3-tidy php7.3-xmlrpc php7.3-xsl php7.3-zip php7.3-mbstring php7.3-imap mcrypt php7.3-snmp php7.3-xmlrpc php7.3-xsl
-	apt_install php7.3 php7.3-common php-bcmath php7.3-gd php7.3-mysql php7.3-imap php7.3-cli php7.3-cgi php-pear mcrypt libruby php7.3-curl php7.3-intl php7.3-pspell php7.3-recode php7.3-sqlite3 php7.3-tidy php7.3-xmlrpc php7.3-xsl php-memcache php-imagick php-gettext php7.3-zip php7.3-mbstring php7.3-soap php7.3-opcache
+	apt_install php7.3 php7.3-common php-bcmath php7.3-gd php7.3-mysql php7.3-imap php7.3-cli php7.3-cgi php-pear mcrypt libruby php7.3-curl php7.3-intl php7.3-pspell php7.3-recode php7.3-sqlite3 php7.3-tidy php7.3-xmlrpc php7.3-xsl php-memcache php-imagick php-php-gettext php7.3-zip php7.3-mbstring php7.3-soap php7.3-opcache
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP-FPM... "
 	#Need to check if soemthing is asked before suppress messages
