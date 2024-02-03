@@ -133,7 +133,7 @@ fi
 # Load needed Modules
 #---------------------------------------------------------------------
 
-DISTRO=beowulf
+echo Detected distro $DISTRO
 
 source $APWD/distros/$DISTRO/preinstallcheck.sh
 source $APWD/distros/$DISTRO/askquestions.sh
