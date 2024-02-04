@@ -12,12 +12,12 @@ InstallAntiVirus() {
   echo "1;" >> /etc/amavis/conf.d/05-node_id
   echo "$CFG_HOSTNAME_FQDN" > /etc/mailname
   echo -e "[${green}DONE${NC}]\n"
-  echo -n "Stopping SpamAssassin... "
-  service spamassassin stop
-  echo -e "[${green}DONE${NC}]\n"
-  echo -n "Disabling SpamAssassin... "
-  hide_output update-rc.d spamassassin disable
-  echo -e "[${green}DONE${NC}]\n"
+  #echo -n "Stopping SpamAssassin... "
+  #service spamassassin stop
+  #echo -e "[${green}DONE${NC}]\n"
+  #echo -n "Disabling SpamAssassin... "
+  #hide_output update-rc.d spamassassin disable
+  #echo -e "[${green}DONE${NC}]\n"
   if [ "$CFG_AVUPDATE" == "yes" ]; then
 	echo -n "Updating Freshclam Antivirus Database. Please Wait... "
 	freshclam
