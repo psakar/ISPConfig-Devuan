@@ -6,7 +6,7 @@ AskQuestions() {
 	CFG_SETUP_WEB=yes #Needed for Multiserver setup compatibility
 	CFG_SETUP_MAIL=yes #Needed for Multiserver setup compatibility
 	CFG_SETUP_NS=yes #Needed for Multiserver setup compatibility
-        CFG_PHP56=no
+  CFG_PHP56=no
 	if ! command -v whiptail >/dev/null; then
 		echo -n "Installing whiptail... "
 		apt_install whiptail
@@ -63,10 +63,10 @@ AskQuestions() {
 		CFG_JKIT=$(whiptail --title "Jailkit" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install Jailkit (it must be installed before ISPConfig)?" 10 50 2 "no" "(default)" ON "yes" "" OFF 3>&1 1>&2 2>&3)
 	done
 
-        while [[ ! "$CFG_PROSODY" =~ $RE ]]
-        do
-                CFG_PROSODY=$(whiptail --title "Prosody" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install XMPP server Prosody?" 10 50 2 "yes" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
-        done
+  while [[ ! "$CFG_PROSODY" =~ $RE ]]
+  do
+          CFG_PROSODY=$(whiptail --title "Prosody" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install XMPP server Prosody?" 10 50 2 "no" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
+  done
 
 	while [[ ! "$CFG_WEBMAIL" =~ $RE ]]
 	do
