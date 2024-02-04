@@ -15,8 +15,8 @@ InstallWebServer() {
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP and modules... "
 	# Need to check if soemthing is asked before suppress messages
-	# apt_install php8.3 php8.3-common php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear  php8.3-curl php8.3-intl php8.3-pspell php8.3-recode php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-zip php8.3-mbstring php8.3-imap mcrypt php8.3-snmp php8.3-xmlrpc php8.3-xsl
-	apt_install php8.3 php8.3-common php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear  php8.3-curl php8.3-intl php8.3-pspell php8.3-recode php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php8.3-zip php8.3-mbstring php8.3-soap
+	# apt_install php8.3 php8.3-common php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear  php8.3-curl php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-zip php8.3-mbstring php8.3-imap mcrypt php8.3-snmp php8.3-xmlrpc php8.3-xsl
+	apt_install php8.3 php8.3-common php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear  php8.3-curl php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php8.3-zip php8.3-mbstring php8.3-soap
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP-FPM... "
 	#Need to check if soemthing is asked before suppress messages
@@ -79,8 +79,8 @@ InstallWebServer() {
 	echo -n "Installing Web server (nginx) and modules... "
 	apt_install nginx
 	service nginx start
-	# apt_install php8.3 php8.3-common php-bcmath php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear mcrypt php8.3-curl php8.3-intl php8.3-pspell php8.3-recode php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php8.3-zip php8.3-mbstring php8.3-imap mcrypt php8.3-snmp php8.3-xmlrpc php8.3-xsl
-	apt_install php8.3 php8.3-common php-bcmath php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear mcrypt libruby php8.3-curl php8.3-intl php8.3-pspell php8.3-recode php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php-memcache php-imagick php-php-gettext php8.3-zip php8.3-mbstring php8.3-soap php8.3-opcache
+	# apt_install php8.3 php8.3-common php-bcmath php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear mcrypt php8.3-curl php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php8.3-zip php8.3-mbstring php8.3-imap mcrypt php8.3-snmp php8.3-xmlrpc php8.3-xsl
+	apt_install php8.3 php8.3-common php-bcmath php8.3-gd php8.3-mysql php8.3-imap php8.3-cli php8.3-cgi php-pear mcrypt libruby php8.3-curl php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-xmlrpc php8.3-xsl php-memcache php-imagick php-php-gettext php8.3-zip php8.3-mbstring php8.3-soap php8.3-opcache
 	echo -e "[${green}DONE${NC}]\n"
 	echo -n "Installing PHP-FPM... "
 	#Need to check if soemthing is asked before suppress messages
