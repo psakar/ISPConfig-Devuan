@@ -4,7 +4,7 @@
 #---------------------------------------------------------------------
 InstallISPConfig() {
   echo "Installing ISPConfig3 from $APWD ... "
-  cp $APWD/ispconfig_prosody_files.tar /tmp
+  #cp $APWD/ispconfig_prosody_files.tar /tmp
   cd /tmp
   if [ "$CFG_ISPCVERSION" == "Beta" ]; then
 	wget -q -O ISPConfig-3.1-beta.tar.gz https://git.ispconfig.org/ispconfig/ispconfig3/repository/archive.tar.gz
@@ -14,28 +14,28 @@ InstallISPConfig() {
 	tar xfz ISPConfig-3-stable.tar.gz
   fi
   cd ispconfig3_install*
-  tar xvf ../ispconfig_prosody_files.tar
+  #tar xvf ../ispconfig_prosody_files.tar
   # switch to prosody
-  rm -f server/conf/metronome*
-  rm -f install/apps/metronome-init
-  cp /etc/init.d/prosody install/apps/prosody-init
-  mkdir install/apps/prosody_libs
-  cp -R install/apps/metronome_libs/* install/apps/prosody_libs
-  sed -i -e "s/metronome/prosody/g" install/apps/prosody_libs/mod_auth_external/authenticate_isp.sh
-  sed -i -e "s/isp-//g" install/apps/prosody_libs/mod_auth_external/authenticate_isp.sh
-  sed -i -e "s/metronome/prosody/g" install/lib/installer_base.lib.php
-  sed -i -e "s/isp-modules/modules/g" install/lib/installer_base.lib.php
-  cp install/tpl/metronome_conf_main.master install/tpl/prosody_conf_main.master
-  cp install/tpl/metronome_conf_global.master install/tpl/prosody_conf_global.master
-  cp install/tpl/metronome_conf_ssl.master install/tpl/prosody_conf_ssl.master
-  sed -i -e "s/metronome/prosody/g" install/tpl/prosody_conf_main.master
-  sed -i -e "s/metronome/prosody/g" install/tpl/prosody_conf_global.master
-  sed -i -e "s/isp-//g" install/tpl/prosody_conf_global.master
-  sed -i '/metronome/,+1 d' install/dist/conf/debian100.conf.php
-  sed -i -e "s/, stream_management, message_carbons//g" install/tpl/server.ini.master
-  sed -i -e "s/, stream_management, message_carbons//g" interface/web/admin/form/server_config.tform.php
-  sed -i '/message_carbons/,+1 d' install/tpl/prosody_conf_global.master
-  sed -i '/stream_management/,+1 d' install/tpl/prosody_conf_global.master
+  #rm -f server/conf/metronome*
+  #rm -f install/apps/metronome-init
+  #cp /etc/init.d/prosody install/apps/prosody-init
+  #mkdir install/apps/prosody_libs
+  #cp -R install/apps/metronome_libs/* install/apps/prosody_libs
+  #sed -i -e "s/metronome/prosody/g" install/apps/prosody_libs/mod_auth_external/authenticate_isp.sh
+  #sed -i -e "s/isp-//g" install/apps/prosody_libs/mod_auth_external/authenticate_isp.sh
+  #sed -i -e "s/metronome/prosody/g" install/lib/installer_base.lib.php
+  #sed -i -e "s/isp-modules/modules/g" install/lib/installer_base.lib.php
+  #cp install/tpl/metronome_conf_main.master install/tpl/prosody_conf_main.master
+  #cp install/tpl/metronome_conf_global.master install/tpl/prosody_conf_global.master
+  #cp install/tpl/metronome_conf_ssl.master install/tpl/prosody_conf_ssl.master
+  #sed -i -e "s/metronome/prosody/g" install/tpl/prosody_conf_main.master
+  #sed -i -e "s/metronome/prosody/g" install/tpl/prosody_conf_global.master
+  #sed -i -e "s/isp-//g" install/tpl/prosody_conf_global.master
+  #sed -i '/metronome/,+1 d' install/dist/conf/debian100.conf.php
+  #sed -i -e "s/, stream_management, message_carbons//g" install/tpl/server.ini.master
+  #sed -i -e "s/, stream_management, message_carbons//g" interface/web/admin/form/server_config.tform.php
+  #sed -i '/message_carbons/,+1 d' install/tpl/prosody_conf_global.master
+  #sed -i '/stream_management/,+1 d' install/tpl/prosody_conf_global.master
   cd install
   # ---
   if [ "$CFG_ISPC" == "standard" ]; then
